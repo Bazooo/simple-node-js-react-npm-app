@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    node {
-      label 'simple-node-project'
+    docker {
+      image 'node:6-alpine'
+      args '-p 3000:3000'
     }
     
   }
